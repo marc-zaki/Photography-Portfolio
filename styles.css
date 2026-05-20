@@ -9,9 +9,9 @@
     --color-bg-surface: #121212;   /* Charcoal Card Surface */
     --color-bg-elevated: #1a1a1a;  /* Elevated Interactive Elements */
     
-    --color-primary: #d4af37;      /* Champagne Gold (Primary Accent) */
-    --color-primary-rgb: 212, 175, 55;
-    --color-primary-hover: #f3cf55;
+    --color-primary: #38bdf8;      /* Sky Blue (Primary Accent) */
+    --color-primary-rgb: 56, 189, 248;
+    --color-primary-hover: #7dd3fc;
     
     --color-text-main: #f5f5f7;     /* Muted Platinum/White */
     --color-text-muted: #8e8e93;    /* Silver/Gray Muted */
@@ -28,14 +28,6 @@
     --transition-smooth: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
     --transition-fast: all 0.25s ease;
     --transition-bounce: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-/* Sky Blue Theme Override */
-body.theme-skyblue {
-    --color-primary: #38bdf8;      /* Sky Blue Primary Accent */
-    --color-primary-rgb: 56, 189, 248;
-    --color-primary-hover: #7dd3fc;
-    --color-border-glow: rgba(56, 189, 248, 0.2);
 }
 
 /* 2. BASE RESET & INITIAL SETUP */
@@ -1666,74 +1658,4 @@ img {
 .toast-text p {
     font-size: 0.8rem;
     color: var(--color-text-muted);
-}
-
-/* ==========================================================================
-   15. THEME SWITCHER WIDGET
-   ========================================================================== */
-.nav-controls {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.theme-switcher {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--color-border);
-    padding: 4px;
-    border-radius: 20px;
-    transition: var(--transition-fast);
-}
-
-.theme-switcher:hover {
-    background-color: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.15);
-}
-
-.theme-btn {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: var(--transition-fast);
-    padding: 0;
-}
-
-.theme-color-dot {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    transition: var(--transition-fast);
-}
-
-.theme-btn.active {
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
-}
-
-.theme-btn.active .theme-color-dot {
-    transform: scale(1.1);
-}
-
-.theme-btn:hover:not(.active) .theme-color-dot {
-    transform: scale(1.2);
-}
-
-@media (max-width: 991px) {
-    .nav-socials {
-        display: none;
-    }
-    
-    .nav-controls {
-        margin-left: auto;
-        margin-right: 20px;
-    }
 }
