@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marc Zaki | Photography Portfolio</title>
+    <meta name="description"
+        content="Cinematic photography portfolio of Marc Zaki, a photographer & videographer. Exploring portraits, events.">
+    <!-- Google Fonts: Syne for editorial headings, Plus Jakarta Sans for clean geometric body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dark-theme">
+
+    <!-- Custom Floating Cursor -->
+    <div class="custom-cursor-dot" id="custom-cursor-dot"></div>
+    <div class="custom-cursor-ring" id="custom-cursor-ring"></div>
+
+    <!-- Header Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="#hero" class="logo hover-target">
+                Marc<span>Zaki</span>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link hover-target">About</a></li>
+                    <li><a href="#experience" class="nav-link hover-target">Experience</a></li>
+                    <li><a href="#portfolio" class="nav-link hover-target">Portfolio</a></li>
+                    <li><a href="#instagram" class="nav-link hover-target">Journal</a></li>
+                    <li><a href="#contact" class="nav-link hover-target">Inquire</a></li>
+                </ul>
+            </nav>
+            <div class="nav-socials">
+                <a href="https://www.instagram.com/markzphotography/" target="_blank"
+                    class="social-icon-link hover-target" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <!-- Hamburger Menu Button for mobile -->
+            <button class="menu-toggle hover-target" id="menu-toggle" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Landing Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-bg-wrapper">
+            <!-- Background image is loaded in CSS via assets/hero.jpg with gradient fallbacks -->
+            <div class="hero-bg" id="hero-bg"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-subtitle-container reveal-text">
+                <span class="gold-accent-line"></span>
+                <span class="hero-subtitle">PHOTOGRAPHER & VIDEOGRAPHER</span>
+            </div>
+            <h1 class="hero-title reveal-text-delay-1">
+                CAPTURING THE <br>
+                <span>CINEMATIC ESSENCE</span> <br>
+                OF ORDINARY LIFE.
+            </h1>
+            <p class="hero-desc reveal-text-delay-2">
+                Editorial portraits, cinematic street narratives, and creative direction from Cairo, Egypt.
+            </p>
+            <div class="hero-actions reveal-text-delay-3">
+                <a href="#portfolio" class="btn btn-primary hover-target">Explore Portfolio</a>
+                <a href="#contact" class="btn btn-outline hover-target">Let's Create</a>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator hover-target" aria-label="Scroll Down">
+            <span class="mouse">
+                <span class="wheel"></span>
+            </span>
+            <span class="scroll-text">SCROLL TO STORY</span>
+        </a>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about-section" id="about">
+        <div class="container grid-container">
+            <div class="about-info-panel scroll-reveal">
+                <span class="section-tag gold-tag">THE STORYTELLER</span>
+                <h2 class="section-title">Framing emotions, freezing time.</h2>
+                <div class="section-divider"></div>
+                <div class="about-body">
+                    <p class="lead-text">
+                        I am Marc, a Photographer specializing in editorial, portrait, and cinematic view
+                        photography.
+                        My work revolves around capturing shadows, dramatic lighting, and deep narratives in everyday
+                        frames.
+                    </p>
+                    <p>
+                        Every photograph is a page in a visual book. By manipulating depth of field, natural lighting,
+                        and high-contrast styling, I translate raw moments into cinematic frames that tell their own
+                        silent, powerful story.
+                    </p>
+                    <p>
+                        Based in Cairo, I lead campaigns, collaborate on editorial lookbooks, and capture commercial
+                        spaces with a keen eye for geometry, human intimacy, and visual branding.
+                    </p>
+                </div>
+                <!-- Gear list or quick specs -->
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <span class="spec-label">Primary Camera</span>
+                        <span class="spec-value">Canon M50</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Favorite Glass</span>
+                        <span class="spec-value">Canon EF 24-105mm f/4L IS II USM</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Base Location</span>
+                        <span class="spec-value">Cairo, Egypt</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image-panel scroll-reveal reveal-delay-2">
+                <div class="about-image-wrapper image-placeholder">
+                    <!-- Drop about.jpg here -->
+                    <img src="assets/about.jpg" alt="Mark - Visual Storyteller" class="about-img lazy-img"
+                        onerror="this.style.opacity='0'; this.parentElement.classList.add('broken-img');">
+                    <div class="frame-border border-top-left"></div>
+                    <div class="frame-border border-bottom-right"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience / Enactus Section -->
+    <section class="experience-section" id="experience">
+        <div class="experience-ambient-light"></div>
+        <div class="container">
+            <div class="experience-header scroll-reveal">
+                <span class="section-tag gold-tag">CREATIVE LEADERSHIP</span>
+                <h2 class="section-title text-center">Former Head of Visuals</h2>
+                <p class="section-subtitle text-center">Enactus MSA University</p>
+                <div class="section-divider center-divider"></div>
+            </div>
+
+            <div class="experience-grid grid-container">
+                <div class="experience-text scroll-reveal">
+                    <p class="experience-lead">
+                        Led creative direction, visual design, photography, branding direction, and video production for
+                        high-impact social campaigns and events.
+                    </p>
+                    <p>
+                        During my time as Head of Visuals at Enactus MSA University, I was responsible for crafting
+                        the entire visual identity of the organization's projects. I managed and mentored a team of
+                        talented designers, videographers, and photographers to build campaigns that reached thousands
+                        of students and external partners.
+                    </p>
+                    <div class="experience-highlights">
+                        <div class="highlight-card hover-target">
+                            <div class="highlight-icon"><i class="fa-solid fa-compass"></i></div>
+                            <h3>Creative Direction</h3>
+                            <p>Supervised concept creation, mood boards, and aesthetic coherence for institutional
+                                launches and projects.</p>
+                        </div>
+                        <div class="highlight-card hover-target">
+                            <div class="highlight-icon"><i class="fa-solid fa-palette"></i></div>
+                            <h3>Branding Visuals</h3>
+                            <p>Designed brand identities, color schemes, and marketing collateral for campaigns and
+                                social projects.</p>
+                        </div>
+                        <div class="highlight-card hover-target">
+                            <div class="highlight-icon"><i class="fa-solid fa-film"></i></div>
+                            <h3>Media Production</h3>
+                            <p>Directed promotional videos, event recaps, and photoshoots to secure sponsorships and
+                                competition ranks.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-stats scroll-reveal reveal-delay-2">
+                    <div class="stat-box hover-target">
+                        <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Major Campaigns Directed</span>
+                    </div>
+                    <div class="stat-box hover-target">
+                        <span class="stat-number" data-target="25">0</span><span class="stat-plus"></span>
+                        <span class="stat-label">Team Members Mentored</span>
+                    </div>
+                    <div class="stat-box hover-target">
+                        <span class="stat-number" data-target="55">0</span><span class="stat-plus">K+</span>
+                        <span class="stat-label">Campaign Reach & Views</span>
+                    </div>
+                    <div class="stat-box hover-target">
+                        <span class="stat-number" data-target="5">0</span><span class="stat-plus">st</span>
+                        <span class="stat-label">Place Visual Presentation Awards</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery Section -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="container">
+            <div class="portfolio-header scroll-reveal">
+                <span class="section-tag gold-tag">GALLERY</span>
+                <h2 class="section-title text-center">Selected Work</h2>
+                <div class="section-divider center-divider"></div>
+
+                <!-- Category Filtering Tabs -->
+                <div class="filter-controls">
+                    <button class="filter-btn active hover-target" data-filter="all">All</button>
+                    <button class="filter-btn hover-target" data-filter="portraits">Portraits</button>
+                    <button class="filter-btn hover-target" data-filter="general-photography">General
+                        Photography</button>
+                    <button class="filter-btn hover-target" data-filter="events">Events</button>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid scroll-reveal">
+
+                <!-- Portraits Category -->
+                <div class="portfolio-item image-placeholder hover-target" data-category="portraits" data-title=""
+                    data-location="Ain-El-Shokhna, Cairo">
+                    <img src="assets/portrait_1.jpg" alt="" class="portfolio-img lazy-img"
+                        onerror="this.style.opacity='0'; this.parentElement.classList.add('broken-img');">
+                    <div class="portfolio-hover-overlay">
+                        <div class="portfolio-meta">
+                            <span class="portfolio-cat-tag">Portrait</span>
+                        </div>
+                        <div class="portfolio-view-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item image-placeholder hover-target" data-category="portraits"
+                    data-location="El-Gouna, Cairo">
+                    <img src="assets/portrait_2.jpg" alt="" class="portfolio-img lazy-img"
+                        onerror="this.style.opacity='0'; this.parentElement.classList.add('broken-img');">
+                    <div class="placeholder-content">
+                        <i class="fa-solid fa-image placeholder-icon"></i>
+                        <span>assets/portrait_2.jpg</span>
+                    </div>
+                    <div class="portfolio-hover-overlay">
+                        <div class="portfolio-meta">
+                            <span class="portfolio-cat-tag">Portrait</span>
+                        </div>
+                        <div class="portfolio-view-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item image-placeholder hover-target" data-category="portraits"
+                    data-location="El-Gouna, Cairo">
+                    <img src="assets/portrait_3.jpg" alt="" class="portfolio-img lazy-img"
+                        onerror="this.style.opacity='0'; this.parentElement.classList.add('broken-img');">
+                    <div class="placeholder-content">
+                        <i class="fa-solid fa-image placeholder-icon"></i>
+                        <span>assets/portrait_3.jpg</span>
+                    </div>
+                    <div class="portfolio-hover-overlay">
+                        <div class="portfolio-meta">
+                            <span class="portfolio-cat-tag">Portrait</span>
+                        </div>
+                        <div class="portfolio-view-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- General Photography Category -->
+                <div class="portfolio-item image-placeholder hover-target" data-category="general-photography"
+                    data-location="Downtown Cairo">
+                    <img src="assets/general-photography_1.jpg" alt="" class="portfolio-img lazy-img"
+                        onerror="this.style.opacity='0'; this.parentElement.classList.add('broken-img');">
+                    <div class="placeholder-content">
+                        <i class="fa-solid fa-image placeholder-icon"></i>
+                        <span>assets/general-photography_1.jpg</span>
+                    </div>
+                    <div class="portfolio-hover-overlay">
+                        <div class="portfolio-meta">
+                            <span class="portfolio-cat-tag">General Photography</span>
+                        </div>
+                        <div class="portfolio-view-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item image-placeholder hover-target" data-category="general-photography"
+                    data-location="Ain El-Shokhna, Cairo">
+                    <img src="assets/general-photography_2.jpg" alt="" class="portfolio-img lazy-img"
+                        onerror="this.style.opacity='0'; this.parentElement.classList.add('broken-img');">
+                    <div class="placeholder-content">
+                        <i class="fa-solid fa-image placeholder-icon"></i>
+                        <span>assets/general-photography_2.jpg</span>
+                    </div>
+                    <div class="portfolio-hover-overlay">
+                        <div class="portfolio-meta">
+                            <span class="portfolio-cat-tag">General Photography</span>
+                        </div>
+                        <div class="portfolio-view-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item image-placeholder hover-target" data-category="general-photography"
+                    data-location="Old Cairo">
+                    <img src="assets/general-photography_3.jpg" alt="" class="portfolio-img lazy-img"
+                        onerror="this.style.opacity='0'; this.parentElement.classList.add('broken-img');">
+                    <div class="placeholder-content">
+                        <i class="fa-solid fa-image placeholder-icon"></i>
+                        <span>assets/general-photography_3.jpg</span>
+                    </div>
+                    <div class="portfolio-hover-overlay">
+                        <div class="portfolio-meta">
+                            <span class="portfolio-cat-tag">General Photography</span>
+                            <p class="portfolio-settings"><i class="fa-solid fa-camera"></i> 50mm f/2.8</p>
+                        </div>
+                        <div class="portfolio-view-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Events Category -->
+                <div class="portfolio-item image-placeholder hover-target" data-category="events"
+                    data-location="MSA Theater">
+                    <img src="assets/event_1.jpg" alt="" class="portfolio-img lazy-img"
+                        onerror="this.style.opacity='0'; this.parentElement.classList.add('broken-img');">
+                    <div class="placeholder-content">
+                        <i class="fa-solid fa-image placeholder-icon"></i>
+                        <span>assets/event_1.jpg</span>
+                    </div>
+                    <div class="portfolio-hover-overlay">
+                        <div class="portfolio-meta">
+                            <span class="portfolio-cat-tag">Event</span>
+                        </div>
+                        <div class="portfolio-view-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item image-placeholder hover-target" data-category="events"
+                    data-location="Enactus How to Build your Career">
+                    <img src="assets/event_2.jpg" alt="" class="portfolio-img lazy-img"
+                        onerror="this.style.opacity='0'; this.parentElement.classList.add('broken-img');">
+                    <div class="placeholder-content">
+                        <i class="fa-solid fa-image placeholder-icon"></i>
+                        <span>assets/event_2.jpg</span>
+                    </div>
+                    <div class="portfolio-hover-overlay">
+                        <div class="portfolio-meta">
+                            <span class="portfolio-cat-tag">Event</span>
+                        </div>
+                        <div class="portfolio-view-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item image-placeholder hover-target" data-category="events"
+                    data-location="The Grand Hall">
+                    <img src="assets/event_3.jpg" alt="" class="portfolio-img lazy-img"
+                        onerror="this.style.opacity='0'; this.parentElement.classList.add('broken-img');">
+                    <div class="placeholder-content">
+                        <i class="fa-solid fa-image placeholder-icon"></i>
+                        <span>assets/event_3.jpg</span>
+                    </div>
+                    <div class="portfolio-hover-overlay">
+                        <div class="portfolio-meta">
+                            <span class="portfolio-cat-tag">Event</span>
+                        </div>
+                        <div class="portfolio-view-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section class="instagram-section" id="instagram">
+        <div class="container">
+            <div class="instagram-header scroll-reveal">
+                <span class="section-tag gold-tag">INSTAGRAM DIARY</span>
+                <h2 class="section-title text-center">Aesthetic Journal</h2>
+                <p class="section-subtitle text-center">
+                    <a href="https://www.instagram.com/markzphotography/" target="_blank"
+                        class="hover-target">@markzphotography <i class="fab fa-instagram"></i></a>
+                </p>
+                <div class="section-divider center-divider"></div>
+            </div>
+
+            <!-- Instagram Grid Mockup (6 square posts) -->
+            <div class="instagram-grid scroll-reveal">
+
+                <a href="https://www.instagram.com/markzphotography/" target="_blank"
+                    class="insta-item image-placeholder hover-target">
+                    <img src="assets/insta_1.jpg" alt="Instagram Post" class="insta-img lazy-img"
+                        onerror="this.style.opacity='0'; this.parentElement.classList.add('broken-img');">
+                    <div class="placeholder-content">
+                        <i class="fab fa-instagram placeholder-icon"></i>
+                        <span>insta_1.jpg</span>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/markzphotography/" target="_blank"
+                    class="insta-item image-placeholder hover-target">
+                    <img src="assets/insta_2.jpg" alt="Instagram Post" class="insta-img lazy-img"
+                        onerror="this.style.opacity='0'; this.parentElement.classList.add('broken-img');">
+                    <div class="placeholder-content">
+                        <i class="fab fa-instagram placeholder-icon"></i>
+                        <span>insta_2.jpg</span>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/markzphotography/" target="_blank"
+                    class="insta-item image-placeholder hover-target">
+                    <img src="assets/insta_3.jpg" alt="Instagram Post" class="insta-img lazy-img"
+                        onerror="this.style.opacity='0'; this.parentElement.classList.add('broken-img');">
+                    <div class="placeholder-content">
+                        <i class="fab fa-instagram placeholder-icon"></i>
+                        <span>insta_3.jpg</span>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/markzphotography/" target="_blank"
+                    class="insta-item image-placeholder hover-target">
+                    <img src="assets/insta_4.jpg" alt="Instagram Post" class="insta-img lazy-img"
+                        onerror="this.style.opacity='0'; this.parentElement.classList.add('broken-img');">
+                    <div class="placeholder-content">
+                        <i class="fab fa-instagram placeholder-icon"></i>
+                        <span>insta_4.jpg</span>
+                    </div>
+
+                </a>
+
+                <a href="https://www.instagram.com/markzphotography/" target="_blank"
+                    class="insta-item image-placeholder hover-target">
+                    <img src="assets/insta_5.jpg" alt="Instagram Post" class="insta-img lazy-img"
+                        onerror="this.style.opacity='0'; this.parentElement.classList.add('broken-img');">
+                    <div class="placeholder-content">
+                        <i class="fab fa-instagram placeholder-icon"></i>
+                        <span>insta_5.jpg</span>
+                    </div>
+                    <div class="insta-overlay">
+                        <div class="insta-stats">
+                            <span><i class="fa-solid fa-heart"></i> 605</span>
+                            <span><i class="fa-solid fa-comment"></i> 49</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/markzphotography/" target="_blank"
+                    class="insta-item image-placeholder hover-target">
+                    <img src="assets/insta_6.jpg" alt="Instagram Post" class="insta-img lazy-img"
+                        onerror="this.style.opacity='0'; this.parentElement.classList.add('broken-img');">
+                    <div class="placeholder-content">
+                        <i class="fab fa-instagram placeholder-icon"></i>
+                        <span>insta_6.jpg</span>
+                    </div>
+                    <div class="insta-overlay">
+                        <div class="insta-stats">
+                            <span><i class="fa-solid fa-heart"></i> 453</span>
+                            <span><i class="fa-solid fa-comment"></i> 29</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Inquiry Section -->
+    <section class="contact-section" id="contact">
+        <div class="container grid-container">
+
+            <div class="contact-info-panel scroll-reveal">
+                <span class="section-tag gold-tag">GET IN TOUCH</span>
+                <h2 class="section-title">Let's create visuals that resonate.</h2>
+                <div class="section-divider"></div>
+                <p class="contact-lead">
+                    Whether you have an editorial campaign to direct, a brand identity to visualize, or a story to
+                    capture, let's collaborate to make it cinematic.
+                </p>
+
+                <div class="contact-methods">
+                    <div class="method-item">
+                        <div class="method-icon"><i class="far fa-envelope"></i></div>
+                        <div class="method-details">
+                            <span>Write to me</span>
+                            <a href="mailto:sherifmark759@gmail.com" class="hover-target">sherifmark759@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="method-item">
+                        <div class="method-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="method-details">
+                            <span>Based in</span>
+                            <a href="#" class="hover-target">Cairo, Egypt</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-social-channels">
+                    <a href="https://www.instagram.com/markzphotography/" target="_blank"
+                        class="social-circle hover-target" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form-panel scroll-reveal reveal-delay-2">
+                <form class="contact-form" id="contactForm">
+                    <!-- FormSubmit Configuration Settings -->
+                    <input type="hidden" name="_subject" value="New Portfolio Inquiry - Marc Zaki Photography">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_honeypot" style="display:none">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required class="form-input hover-target">
+                            <label for="name" class="form-label">Your Name</label>
+                            <span class="input-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required class="form-input hover-target">
+                            <label for="email" class="form-label">Email Address</label>
+                            <span class="input-line"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <select id="inquiry-type" name="inquiry-type" class="form-input form-select hover-target">
+                            <option value="editorial">Editorial Shoot</option>
+                            <option value="street">Street & Branding Narratives</option>
+                            <option value="events">Event Media Coverage</option>
+                            <option value="creative-direction">Creative Direction & Branding</option>
+                            <option value="other">Other Inquiry</option>
+                        </select>
+                        <label for="inquiry-type" class="form-label active">Project Type</label>
+                        <span class="input-line"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea id="message" name="message" required rows="5" class="form-input hover-target"></textarea>
+                        <label for="message" class="form-label">Tell me about your vision</label>
+                        <span class="input-line"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-submit hover-target">
+                        Send Inquiry <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2026 Mark Z. Photography. All rights reserved.</p>
+            <p class="developer-tag">Crafted with elegance &amp; cinematic vision</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal Overlay -->
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog">
+        <button class="lightbox-close hover-target" id="lightbox-close" aria-label="Close Lightbox"><i
+                class="fa-solid fa-xmark"></i></button>
+        <button class="lightbox-nav lightbox-prev hover-target" id="lightbox-prev" aria-label="Previous Image"><i
+                class="fa-solid fa-chevron-left"></i></button>
+        <button class="lightbox-nav lightbox-next hover-target" id="lightbox-next" aria-label="Next Image"><i
+                class="fa-solid fa-chevron-right"></i></button>
+
+        <div class="lightbox-content-wrapper">
+            <div class="lightbox-image-container">
+                <img src="" alt="Lightbox View" class="lightbox-img" id="lightbox-img">
+            </div>
+
+            <div class="lightbox-details-panel">
+                <div class="lightbox-meta">
+                    <span class="lightbox-category" id="lightbox-category">PORTRAITS</span>
+                    <h3 class="lightbox-title" id="lightbox-title">Chiaroscuro Silhouette</h3>
+                    <p class="lightbox-location" id="lightbox-location"><i class="fa-solid fa-location-dot"></i> Studio,
+                        Cairo</p>
+                </div>
+                <div class="lightbox-exif">
+                    <div class="exif-item">
+                        <i class="fa-solid fa-camera"></i>
+                        <span id="lightbox-settings">85mm | f/1.4 | 1/200s | ISO 100</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal Notification -->
+    <div class="toast-notification" id="toast-notification">
+        <div class="toast-content">
+            <i class="fa-solid fa-circle-check toast-icon"></i>
+            <div class="toast-text">
+                <h4>Inquiry Sent</h4>
+                <p>Thank you, Mark will respond shortly.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Javascript App -->
+    <script src="app.js"></script>
+</body>
+
+</html>
