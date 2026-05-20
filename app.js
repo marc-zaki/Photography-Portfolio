@@ -393,4 +393,40 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ==========================================
+    // 7. COLOR PALETTE THEME SWITCHER
+    // ==========================================
+    const themeSwitcher = document.getElementById('theme-switcher');
+    if (themeSwitcher) {
+        const themeButtons = themeSwitcher.querySelectorAll('.theme-btn');
+        
+        const applyTheme = (themeName) => {
+            if (themeName === 'skyblue') {
+                document.body.classList.add('theme-skyblue');
+            } else {
+                document.body.classList.remove('theme-skyblue');
+            }
+            
+            themeButtons.forEach(btn => {
+                if (btn.getAttribute('data-theme') === themeName) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+            
+            localStorage.setItem('portfolio-theme', themeName);
+        };
+        
+        const savedTheme = localStorage.getItem('portfolio-theme') || 'gold';
+        applyTheme(savedTheme);
+        
+        themeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const selectedTheme = button.getAttribute('data-theme');
+                applyTheme(selectedTheme);
+            });
+        });
+    }
+
 });
