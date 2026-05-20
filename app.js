@@ -354,14 +354,28 @@ document.addEventListener('DOMContentLoaded', () => {
                     'Accept': 'application/json'
                 }
             })
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    return response.text().then(text => {
+                        let errMsg = `Server returned status ${response.status}`;
+                        try {
+                            const parsed = JSON.parse(text);
+                            if (parsed.message) errMsg += `: ${parsed.message}`;
+                        } catch (e) {
+                            if (text) errMsg += `: ${text.substring(0, 150)}`;
+                        }
+                        throw new Error(errMsg);
+                    });
+                }
+                return response.json();
+            })
             .then(data => {
                 // Restore button state
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalBtnContent;
                 
-                // FormSubmit returns {"success":"true", "message":"..."}
-                if (data.success === "true") {
+                // FormSubmit can return {"success":"true"} or {"success":true}
+                if (data.success === "true" || data.success === true) {
                     // Show floating Toast alert notification
                     if (toast) {
                         toast.classList.add('active');
@@ -382,7 +396,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     });
                 } else {
-                    alert("Submission failed: " + (data.message || "Please check your network and try again."));
+                    alert("Submission failed: " + (data.message || "Please check your form details and try again."));
                 }
             })
             .catch(error => {
@@ -390,7 +404,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalBtnContent;
                 console.error("FormSubmit Error:", error);
-                alert("An error occurred. Please try again or email directly.");
+                
+                let friendlyMsg = "An error occurred while sending your inquiry.\n\n";
+                if (error.message.includes("Failed to fetch") || error.name === "TypeError") {
+                    friendlyMsg += "The request failed to reach the server. This is frequently caused by adblockers (like Brave Shields, uBlock Origin) blocking third-party form processors. Please try disabling your adblocker for this site, or contact me directly via email.";
+                } else {
+                    friendlyMsg += error.message + "\n\nPlease try again or contact me directly via email.";
+                }
+                alert(friendlyMsg);
             });
         });
     }
