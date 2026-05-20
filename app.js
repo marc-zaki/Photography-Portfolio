@@ -341,16 +341,15 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = true;
             submitBtn.innerHTML = `Sending... <i class="fa-solid fa-circle-notch fa-spin"></i>`;
             
-            // Build the form data payload as JSON for the AJAX endpoint
+            // Build the form data payload as URLSearchParams to avoid CORS preflight (OPTIONS) requests
             const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData.entries());
+            const params = new URLSearchParams(formData);
             
             // Send actual network request using FormSubmit AJAX API
             fetch("https://formsubmit.co/ajax/sherifmark759@gmail.com", {
                 method: "POST",
-                body: JSON.stringify(data),
+                body: params,
                 headers: {
-                    'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 }
             })
